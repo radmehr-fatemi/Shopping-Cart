@@ -1,0 +1,107 @@
+.cart {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    // align-items: center;
+    width: 100vw;
+}
+
+.checkoutCart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 70vh;
+    background: linear-gradient(to right top, rgb(223, 232, 230), rgb(74, 127, 133));
+    position: sticky;
+    top: 5rem;
+    right: 0;
+}
+
+.checkoutCartTrue {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 2rem 0;
+
+    h1 {
+        font-size: 1.7rem;
+        color: #0a5c6d;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        padding: 4px 12px;
+        background-color: #0a5c6d;
+        background: linear-gradient(to right top, #0a5c6d, #8ccecd);
+        margin: 1rem 0;
+        border-radius: 4px;
+
+        &:hover {
+            background: #fff;
+            color: #0a5c6d;
+            transition: all 1s;
+        }
+    }
+}
+
+.checkoutCartFalse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    h1 {
+        color: rgb(17, 90, 88);
+    }
+
+    button {
+        border: none;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background-color: rgb(58, 108, 102);
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+            color: rgb(58, 108, 102);
+            background-color: #fff;
+            transition: all .4s;
+        }
+    }
+}
+
+.checkoutCartByMore {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        padding: 2px 8px;
+
+        &:hover {
+            border-bottom: 1px solid #fff;
+            transition: all .5s;
+        }
+    }
+
+    button {
+        border: none;
+        padding: 4px 10px;
+        border-radius: 4px;
+
+        // margin: 0 1rem;
+        &:hover {
+            color: #fff;
+            background-color: rgb(23, 84, 84);
+            transition: all .3s;
+            cursor: pointer;
+        }
+    }
+}
