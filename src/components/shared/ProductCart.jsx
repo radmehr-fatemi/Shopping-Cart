@@ -22,7 +22,7 @@ const ProductCart = ({ productData, dispatch }) => {
             </div>
 
             <div className={style.priceCart}>
-                <span> {price} $ </span>
+                <span> { price } $ * </span>
                 <span> {quantity} </span>
             </div>
 

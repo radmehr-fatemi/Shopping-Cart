@@ -38,7 +38,7 @@ const ProductStore = ({ productData }) => {
             <div className={style.buttonProduct}>
                 <Link to={`/details/${id}`}> Details </Link>
 
-                <div className={style.buttonProductTransition} >
+                <div className={style.buttonProductTransition} style={{ transition: "all .5s" }} >
                     {
                         isItThere(state, id) ?
                             <button id={style.INCREASE} onClick={() => dispatch({ type: 'INCREASE', payload: productData })} > + </button> :

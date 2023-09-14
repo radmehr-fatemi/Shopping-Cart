@@ -27,6 +27,7 @@ const Cart = () => {
                 {
                     !state.checkout && (!!state.selectedItem.length) && <div className={style.checkoutCartFalse} >
                         <h1> Proceed to checkout </h1>
+                        <span> Total: { state.total.toFixed(2) } $ </span>
                         <button onClick={() => dispatch({ type: 'CHECKOUT' })} > Checkout </button>
                     </div>
                 }
