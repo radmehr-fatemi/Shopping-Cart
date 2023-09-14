@@ -3,14 +3,14 @@ import style from "./ProductStore.module.scss";
 import { Link } from "react-router-dom";
 
 //SVG
-  import trashSVG from '../assets/trash.svg';
+  import trashSVG from '../../assets/trash.svg';
 
 //function
-import { findQuantity, shorter, shorterLetters } from '../helper/function';
-import { isItThere } from '../helper/function';
+import { findQuantity, shorter, shorterLetters } from '../../helper/function';
+import { isItThere } from '../../helper/function';
 
 //Context
-import { CartContext } from '../context/CartContextProvider';
+import { CartContext } from '../../context/CartContextProvider';
 
 const ProductStore = ({ productData }) => {
 

@@ -6,7 +6,7 @@ import style from "./Cart.module.scss";
 import { CartContext } from '../context/CartContextProvider';
 
 //Component
-import ProductCart from '../shared/ProductCart';
+import ProductCart from './shared/ProductCart';
 
 const Cart = () => {
 

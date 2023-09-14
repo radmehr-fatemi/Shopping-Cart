@@ -2,11 +2,11 @@
     display: flex;
     align-items: center;
     padding: 1rem;
-    width: 100%;
+    width: 70vw;
     height: 140px;
     border-bottom: 2px solid #fff;
-    background: linear-gradient(to right  ,rgb(140, 161, 161) ,rgb(255, 255, 255));
-    transition: all .3s;
+    background: linear-gradient(to right, rgb(140, 161, 161), rgb(255, 255, 255));
+    transition: all .3s ease-in;
 
 
     img {
@@ -49,12 +49,13 @@
 
     .buttonCart {
         padding: 0 1rem;
-        width: 10%;
+        width: 20%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-left: 1px solid silver;
         margin-left: 8px;
+        transition: all .5s ease-in-out;
 
         button {
             padding: 2px 8px;
@@ -63,11 +64,20 @@
             color: #fff;
             border-radius: 4px;
             cursor: pointer;
+
+            &:nth-child(2) {
+                width: 30px;
+                height: 20px;
+                padding: 0;
+            }
         }
 
         img {
-            width: 100px;
-
+            background: #32bcae;
+            width: 130%;
+            height: 100%;
+            padding: 0;
+            display: block;
         }
     }
 }

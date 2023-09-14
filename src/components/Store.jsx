@@ -5,7 +5,7 @@ import style from "./Store.module.scss";
 import { ProductContext } from '../context/ProductContextProvider';
 
 //Component
-import ProductStore from '../shared/ProductStore';
+import ProductStore from './shared/ProductStore';
 
 const Store = () => {
 
