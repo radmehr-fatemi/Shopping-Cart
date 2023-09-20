@@ -3,7 +3,7 @@ import style from "./ProductStore.module.scss";
 import { Link } from "react-router-dom";
 
 //SVG
-  import trashSVG from '../../assets/trash.svg';
+import trashSVG from '../../assets/trash.svg';
 
 //function
 import { findQuantity, shorter, shorterLetters } from '../../helper/function';
@@ -26,7 +26,7 @@ const ProductStore = ({ productData }) => {
                 <h1> {shorter(title)} </h1>
             </div>
 
-            <div>
+            <div className={ style.priceProduct }>
                 <span> Price: {price} </span>
                 <span> Category: {category} </span>
             </div>
@@ -41,15 +41,19 @@ const ProductStore = ({ productData }) => {
                 <div className={style.buttonProductTransition} style={{ transition: "all .5s" }} >
                     {
                         isItThere(state, id) ?
-                            <button id={style.INCREASE} onClick={() => dispatch({ type: 'INCREASE', payload: productData })} > + </button> :
+                            <div>
+                                <button id={style.INCREASE} onClick={() => dispatch({ type: 'INCREASE', payload: productData })} > + </button>
+
+                                {findQuantity(state, id) > 0 && <span id={style.quantityProduct} > {findQuantity(state, id)} </span>}
+
+                                {findQuantity(state, id) === 1 && <button id={style.REMOVE_ITEM} onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: productData })} > <img src={trashSVG} alt="trash" /> </button>}
+
+                                {findQuantity(state, id) > 1 && <button id={style.DECREASE} onClick={() => dispatch({ type: 'DECREASE', payload: productData })} > - </button>}
+
+                            </div> :
+
                             <button id={style.ADD_ITEM} onClick={() => dispatch({ type: 'ADD_ITEM', payload: productData })}> Add to cart </button>
                     }
-
-                    {findQuantity(state, id) > 0 && <span id={style.quantityProduct} > {findQuantity(state, id)} </span>}
-
-                    {findQuantity(state, id) === 1 && <button id={style.REMOVE_ITEM} onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: productData })} > <img src={trashSVG} alt="trash" /> </button>}
-
-                    {findQuantity(state, id) > 1 && <button id={style.DECREASE} onClick={() => dispatch({ type: 'DECREASE', payload: productData })} > - </button>}
                 </div>
 
             </div>

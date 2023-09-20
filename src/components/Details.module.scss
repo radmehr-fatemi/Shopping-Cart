@@ -2,6 +2,7 @@
     background: linear-gradient(to right, rgb(56, 80, 88), rgba(75, 173, 165, 0.8), #fff, );
     height: 100vh;
     padding: 2rem;
+    animation: Show .3s;
 
     img {
         width: 18vw;
@@ -45,5 +46,47 @@
         padding: .4rem 1rem;
         background: rgb(43, 146, 164);
         border-radius: 4px;
+    }
+}
+
+@keyframes Show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media( max-width : 768px ) {
+    .details {
+        padding: .5rem;
+
+        img {
+            width: 100px ;
+            padding: .2rem;
+        }
+
+        h1 {
+            font-size: 1.4rem;
+        }
+
+        span {
+            font-size: .8rem;
+
+            &:nth-child(1) {
+                font-size: .8rem;
+            }
+        }
+
+        p {
+            font-size: .8rem;
+        }
+
+        a {
+            padding: 4px;
+            font-size: .8rem;
+        }
     }
 }
