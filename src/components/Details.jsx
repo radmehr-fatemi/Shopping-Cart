@@ -10,7 +10,7 @@ import { ProductContext } from '../context/ProductContextProvider';
 const Details = () => {
 
     const id = useParams().id;
-    const { title ,image ,price ,category ,description } = useContext(ProductContext)[id];
+    const { title ,image ,price ,category ,description } = useContext(ProductContext)[ id - 1 ];
     
     return (
         <div className={style.details}>
